@@ -242,7 +242,7 @@ class UpdateWindow(Gtk.ApplicationWindow):
     def __init__(self, application):
         super(UpdateWindow, self).__init__(
             application=application,
-            title="Simple APT Update")
+            title="Atualizar Softwares e Drivers")
         self.application = application
         self.stdout_queue = queue.Queue()
         self.stderr_queue = queue.Queue()
@@ -262,19 +262,19 @@ class UpdateWindow(Gtk.ApplicationWindow):
         hbox.add(grid)
 
         self.update_button = Gtk.Button.new_with_label(
-            "Update Cache")
+            "Atualizar o Cache")
         self.update_button.connect("clicked", self.on_update)
         grid.attach(self.update_button, 0, 0, 1, 1)
 
         self.list_button = Gtk.Button.new_with_label(
-            "List Upgrades")
+            "Listar Atualizações")
         self.list_button.connect("clicked", self.on_list)
         grid.attach(self.list_button, 1, 0, 1, 1)
 
         self.upgrade_button = Gtk.Button.new_from_icon_name(
             "gtk-apply", Gtk.IconSize.BUTTON)
         self.upgrade_button.set_tooltip_text(
-            "Download and install all available upgrades")
+            "Baixar e instalar todas as atualizações disponíveis")
         self.upgrade_button.connect("clicked", self.on_upgrade)
         grid.attach(self.upgrade_button, 2, 0, 1, 1)
 
@@ -284,7 +284,7 @@ class UpdateWindow(Gtk.ApplicationWindow):
 
         self.quit_button = Gtk.Button.new_from_icon_name(
             "exit", Gtk.IconSize.BUTTON)
-        self.quit_button.set_tooltip_text("Exit the program")
+        self.quit_button.set_tooltip_text("Sair do programa")
         self.quit_button.set_halign(Gtk.Align.END)
         self.quit_button.connect("clicked", self.on_quit)
         grid.attach(self.quit_button, 4, 0, 1, 1)
