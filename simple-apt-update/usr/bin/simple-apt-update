@@ -1,0 +1,7 @@
+#!/bin/bash
+# /usr/bin/simple-apt-update - launcher que define o nome do processo
+APPDIR="/usr/share/simple-apt-update"
+
+# Usa exec -a para apresentar o nome "simple-apt-update" ao kernel/compositor
+exec pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY \
+    /usr/bin/python3 "$APPDIR/app.py" "$@"

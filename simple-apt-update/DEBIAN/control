@@ -1,0 +1,9 @@
+Package: simple-apt-update
+Version: 0.2
+Section: admin
+Architecture: all
+Installed-Size: 62
+Maintainer: Tilman Kranz <t.kranz@tk-sls.de>
+Depends: python3-gi, polkitd, pkexec
+Description: Simple GUI for basic tasks with APT
+  A simple GUI wrapper for "apt update", "apt list --upgradeable" and "apt full-upgrade".

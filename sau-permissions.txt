@@ -1,0 +1,11 @@
+chmod 644 DEBIAN/control
+chmod 755 DEBIAN/postinst
+chmod 755 usr/bin/simple-apt-update
+
+chmod 644 usr/share/icons/hicolor/scalable/apps/simple-apt-update.svg
+chmod 644 usr/share/applications/simple-apt-update.desktop
+
+sudo chmod 755 usr/share/simple-apt-update/app.py
+
+-- Constrói o pacote
+dpkg-deb --build --root-owner-group simple-apt-update

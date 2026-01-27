@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Debian - Atualizar Softwares e Drivers
+Comment=Peform Package Updates using APT
+Exec=/usr/bin/simple-apt-update
+Icon=simple-apt-update
+Terminal=false
+Type=Application
+Categories=System;Settings;
