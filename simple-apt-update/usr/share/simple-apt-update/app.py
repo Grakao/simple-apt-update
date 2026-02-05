@@ -194,7 +194,7 @@ class UpdateWindow(Gtk.ApplicationWindow):
             ignore_stderr=True,
             clear=clear,
             output_msg="Found the following package upgrades:",
-            empty_msg="Currently there are no available package upgrades.")
+            empty_msg="Comando executado!")
 
     def on_list(self, *args):
         self.list()
