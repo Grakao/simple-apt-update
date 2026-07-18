@@ -242,7 +242,7 @@ class UpdateWindow(Gtk.ApplicationWindow):
     def __init__(self, application):
         super(UpdateWindow, self).__init__(
             application=application,
-            title="Atualizar Softwares e Drivers")
+            title="Simple APT Update")
         self.application = application
         self.stdout_queue = queue.Queue()
         self.stderr_queue = queue.Queue()
@@ -259,6 +259,25 @@ class UpdateWindow(Gtk.ApplicationWindow):
         grid = Gtk.Grid()
         grid.set_row_spacing(5)
         grid.set_column_spacing(5)
+
+        header = Gtk.Box(
+            orientation=Gtk.Orientation.HORIZONTAL,
+            spacing=10
+        )
+
+        logo = Gtk.Image.new_from_icon_name(
+            "debian-logo",
+            Gtk.IconSize.DIALOG
+        )
+
+        header.pack_start(logo, False, False, 0)
+
+        title = Gtk.Label(label="Ferramenta para atualização de Softwares, Drivers e Firmwares via APT.")
+        title.set_xalign(0)
+        header.pack_start(title, True, True, 0)
+
+        hbox.pack_start(header, False, False, 5)
+
         hbox.add(grid)
 
         self.update_button = Gtk.Button.new_with_label(
